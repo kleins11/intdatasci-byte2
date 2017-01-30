@@ -13,6 +13,12 @@ from googleapiclient.discovery import build
 # fusion tables API using the developer key
 service = build('fusiontables', 'v1', developerKey=API_KEY)
 
+# This is where I am attempting to load the API_KEY 
+API_KEY = AIzaSyCQELPFTPR3k_SYv23WYGk0H6igFs2U5j0
+
+# This is where I am attempting to load TABLE_ID
+TABLE_ID = 1OVBDhPToqLcxTOiKb8LEUut1slvx6-2pdFlOY_Qc
+
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
