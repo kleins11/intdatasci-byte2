@@ -19,6 +19,9 @@ API_KEY = AIzaSyCQELPFTPR3k_SYv23WYGk0H6igFs2U5j0
 # This is where I am attempting to load TABLE_ID
 TABLE_ID = 1OVBDhPToqLcxTOiKb8LEUut1slvx6-2pdFlOY_Qc
 
+# This is where I am attempting to load the response ID 
+request = service.column().list(tableId=TABLE_ID)
+
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
