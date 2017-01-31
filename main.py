@@ -22,6 +22,16 @@ TABLE_ID = 1OVBDhPToqLcxTOiKb8LEUut1slvx6-2pdFlOY_Qc
 # This is where I am attempting to load the response ID 
 request = service.column().list(tableId=TABLE_ID)
 
+# This is where I am define get_all_data() as per that dude on piazza's advice.
+# I'm doing this because I couldn't run get all data self in the command line.  
+def get_all_data():
+    query = "SELECT * FROM " + TABLE_ID + " WHERE  Educational Atainment = 'No high school diploma' LIMIT 2"
+    response = service.query().sql(sql=query).execute()
+    logging.info(response['columns'])
+    logging.info(response['rows'])
+        
+    return response
+
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
@@ -36,6 +46,10 @@ app.config['DEBUG'] = True
 
 
 @app.route('/')
+def index():
+    template = JINJA_ENVIRONMENT.get_template('templates/index.html')
+    get_all_data()
+    return template.render()
 def hello():
     template =
 JINJA_ENVIRONMENT.get_template('templates/index.html')
