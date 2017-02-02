@@ -9,15 +9,15 @@ import urllib
 # this is used for constructing URLs to google's APIS
 from googleapiclient.discovery import build
 
+# This is where I am attempting to load the API_KEY 
+API_KEY = "AIzaSyCQELPFTPR3k_SYv23WYGk0H6igFs2U5j0"
+
 # This uses discovery to create an object that can talk to the 
 # fusion tables API using the developer key
 service = build('fusiontables', 'v1', developerKey=API_KEY)
 
-# This is where I am attempting to load the API_KEY 
-API_KEY = AIzaSyCQELPFTPR3k_SYv23WYGk0H6igFs2U5j0
-
 # This is where I am attempting to load TABLE_ID
-TABLE_ID = 1OVBDhPToqLcxTOiKb8LEUut1slvx6-2pdFlOY_Qc
+TABLE_ID = "1OVBDhPToqLcxTOiKb8LEUut1slvx6-2pdFlOY_Qc"
 
 # This is where I am attempting to load the response ID 
 request = service.column().list(tableId=TABLE_ID)
