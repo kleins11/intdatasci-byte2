@@ -25,3 +25,6 @@ cd intdatasci-byte2/
 git add . 
 git commit -m "attempts to load API_KEY and TABLE_ID in main.py"
 git push
+git add .
+git commit -m "attempt to load API_KEY and TABLE_ID into main.psy"
+git push
