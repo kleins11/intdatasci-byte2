@@ -1,0 +1,107 @@
+k<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Quality of This Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="about">About This Data Set</a></li>
+	    <li  class="active"><a href="quality">Data Quality</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+	<h1>Quality: About This Data Set</h1>
+        <p>Despite what Wrangler indicated and this data being from a reliable source such as the Californian
+        government, this data seems problematic for reasons outlined below. </p>
+      </div>
+
+    
+      <div class="page-header">
+	<h2>Is the data complete?</h2>
+	<p>This dataset is not complete. A major reason is because the data leans heavily into ranges and does not give precise 
+	values for Age and Income. For instance, we can only see that a participant earns between $15,000 and $24,999. We don’t know
+	what the precise take-home income is, whether that be $15,235 or $18,000 or $23,500. Similarly, we can only see that a 
+	participant is between 18 and 64, and we don’t know if that participant is 20 or 45. In order to feed this data into Wrangler, Excel, and Google 
+	Fusion Tables, I had to split cell ranges, but in doing so, this maintains the degree of vagueness around articulating income
+	ranges rather than income precise values. The average minimum and maximum income levels, for example, are sketchy
+	averages because they are averages of minimums and maximum potential values rather than actual values themselves. 
+	<br>
+	It is also of note that the income intervals in the data as coded by the California Department of Finance do not seem to make
+	much sense. For example, why is one income interval $5,000-$9,999, yet another income interval is $75,000+, and yet 
+	another income interval is $50,000-$74,000? There is no justification provided with the data on these intervals. A similar 
+	problem arises when looking at the age intervals in the original data.  
+	</br></p>
+      </div>
+      
+      <div class="page-header">
+	<h2>Is the data coherent?</h2>
+	<p>Upon first looking at the raw data, there is no reason to believe that this data is not consistent with itself. One might 
+	hypothesize that a possible risk to coherency is if the same person participated in the survey twice and reported different 
+	values in each report. Other than this, there wasno reason to assume that the specified combinations of age, income, and 
+	education attainment level can’t coexist per participant. <br> 
+	</br>
+	However, upon looking at the visualizations of the random samples after I cleaned the data with Wrangler, something is 
+	definitely wrong with either the data, the way I sampled this data, or inputting the values into Wrangler, Google Fusion Tables,
+	or Google Spreadsheets. For instance, it does not make sense that in Random Sample B, average maximum income values for 
+	“high school or equivalent”, “no high school diploma”, and “some college, less than a 4-year degree” are well above 
+	six figures. Perhaps there are some extreme outliers there skewing the data, but even so, it is unlikely that there are 
+	extreme outliers in all these three categories within one random sample of 36 fields. If I had more time to complete this
+	assignment, I would definitely take more random samples of this data and see what these random samples returned. 
+	</p>
+      </div>
+
+      <div class="page-header">
+	<h2>Is the data correct?</h2>
+	<p>The data as indicated in these two random samples do not seem to be correct. I would need to take more random samples of the
+	data to have a better likelihood of being right on this, but according to the Bureau of Labor Statistics, <a href = "https://www.bls.gov/emp/ep_chart_001.htm">
+	weekly median earnings do have a positive relationship with increasing levels of education obtainment.</a>
+	The random samples as indicated in this Byte indicate that no relationships seem to exist, yet alone a positive one. (Again, I would need to take more
+	random samples to know this for sure.)</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+  </body>
+</html>
