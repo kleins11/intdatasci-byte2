@@ -615,7 +615,8 @@
         }
       ],
       "selected": {
-        "selected": "Orion2014"
+        "selected": "Orion2014",
+        "editorSelected": "Prospecto"
       },
       "editorstylesVersion": 6.88,
       "styles": [
@@ -748,11 +749,17 @@
           "bannerProgress": "#F2F2F2"
         }
       ],
-      "stylesVersion": "6.88"
+      "stylesVersion": 6.88
     },
     "window": {
       "favorites": {
         "recentFind": [
+          {
+            "name": "h1"
+          },
+          {
+            "name": "query"
+          },
           {
             "name": "templates"
           }
@@ -761,7 +768,7 @@
     },
     "edit": {
       "outline": {
-        "outlineProvider": "orion.outline.css.outliner"
+        "outlineProvider": "orion.webtools.html.outliner"
       }
     }
   }
