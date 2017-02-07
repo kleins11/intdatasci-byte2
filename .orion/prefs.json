@@ -773,6 +773,14 @@
       "outline": {
         "outlineProvider": "orion.webtools.html.outliner"
       }
+    },
+    "settingsContainer": {
+      "selection": "cssFormatting"
+    },
+    "settings": {
+      "sectionExpand": {
+        "settings.section.jsbeautify.config.css": false
+      }
     }
   }
 }

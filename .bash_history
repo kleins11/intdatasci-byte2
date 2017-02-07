@@ -190,3 +190,36 @@ ls
 cd src
 cd harison-byte2/
 cd intdatasci-byte2/
+git add . 
+git commit -m "okay i deleted the other app.yaml that was not in any relevant directory"
+git push
+git pull
+gcloud confit set project harison-byte2
+gcloud config set project harison-byte2
+ls
+git add . 
+git commit -m "Matt helped me with that magic line of code let's hope it works" 
+git push
+git status
+ls
+gcloud app deploy
+gcloud config set project harison-byte2
+git add . 
+git commit -m "here we go again, matt is still helping me thankfully"
+git add . 
+git commit -m "I changed Jenn's ID in app.yaml to harison-byte2"
+git push
+gcloud app deploy
+git add . 
+git commit -m "I added an equal sign before version like matt told me to do" 
+git push
+gcloud app deploy
+git add . 
+git commit -m "it seems as though matt and piazza are saying the same thing about deleting that application line thing" 
+git push
+gcloud app deploy
+git add . 
+git commit -m "put back version: 1"
+git push
+gcloud app deploy
+dev_appserver.py --log_level=debug $PWD
